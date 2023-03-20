@@ -51,18 +51,18 @@ export default function HTML(props) {
         {/* End Google Tag Manager */}
 
         {/* Global site tag (gtag.js) - Google Ads: 339029822 */}
-        {/* <script async src='https://www.googletagmanager.com/gtag/js?id=AW-339029822'></script> */}
-        {/* <script
+        <script async src='https://www.googletagmanager.com/gtag/js?id=G-CMGDHHNWH0'></script>
+        <script
           dangerouslySetInnerHTML={{
             __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
            
-            gtag('config', 'AW-339029822');
+            gtag('config', 'G-CMGDHHNWH0');
             `,
           }}
-        /> */}
+        />
         {/* Facebook Pixel Code */}
         {/* <script
           dangerouslySetInnerHTML={{
