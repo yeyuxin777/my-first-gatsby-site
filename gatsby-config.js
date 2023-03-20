@@ -4,10 +4,12 @@
 module.exports = {
   siteMetadata: {
     title: `My Gatsby Site`,
-    siteUrl: `https://www.yourdomain.tld`
+    author: `yuxin.ye`
   },
   plugins: [
     "gatsby-plugin-sass", 
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
     {
       resolve: "gatsby-plugin-google-gtag",
       options: {
