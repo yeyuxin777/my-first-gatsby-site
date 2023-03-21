@@ -49,7 +49,7 @@ export default function HTML(props) {
         {/* End Google Tag Manager */}
 
         {/* Global site tag (gtag.js) - Google Ads: 339029822 */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-5JP83J9LMG"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-4YXCBMNFNM"></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -57,7 +57,7 @@ export default function HTML(props) {
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
   
-            gtag('config', 'G-5JP83J9LMG');
+            gtag('config', 'G-4YXCBMNFNM');
             `,
           }}
         />
