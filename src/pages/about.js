@@ -15,6 +15,8 @@ const About = ({ data }) => {
 
 export default About
 
+export const Head = () => <title>About</title>
+
 export const query = graphql`
   query {
     site {

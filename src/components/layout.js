@@ -14,15 +14,33 @@ const Layout = ({ pageTitle, children }) => {
       <nav>
         <ul className={navLinks}>
           <li className={navLinkItem}>
-            <Link to="/" className={navLinkText}>
+            <Link to="/" className={navLinkText} id="home">
               Home
             </Link>
           </li>
           <li className={navLinkItem}>
-            <Link to="/about" className={navLinkText}>
+            <Link to="/about" className={navLinkText}  pageName={document.title}
+        buttonId="RW_HP_Top_Banner_Athlete_EHEALTH"
+        buttonName="立即预约"
+        onClick={()=>{
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({
+          event: "buttonClick1",
+          page_name: document.title,
+          button_name: "buttonName",
+          button_ID: "button2222"
+          })}}
+        >
+          
               About
             </Link>
           </li>
+          <a 
+            id="other" 
+            href="/other"
+          >
+            <span>Other</span>
+          </a>
         </ul>
       </nav>
       <main>
@@ -32,5 +50,6 @@ const Layout = ({ pageTitle, children }) => {
     </div>
   )
 }
+export const Head = () => <title>Home Page</title>
 
 export default Layout
