@@ -11,17 +11,18 @@ const IndexPage = () => {
         target="_blank"
         id="hhhhh"
         href="https://www.youtube.com/"
-        pageName={document?.title}
+        pageName={document.title}
         buttonId="RW_HP_Top_Banner_Athlete_EHEALTH"
         name="立即预约"
         onClick={()=>{
           window.dataLayer = window.dataLayer || [];
           window.dataLayer.push({
-          event: "share",
-          page_name: document?.title,
-          button_name: "buttonName",
-          button_ID: "button2222"
-          })}}
+            event: "share",
+            page_name: document.title,
+            button_name: "buttonName",
+            button_ID: "button2222"
+          })
+        }}
         
       >
         <span>Twitter</span>
@@ -30,7 +31,7 @@ const IndexPage = () => {
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
         event: "click",
-        page_name: document?.title,
+        page_name: document.title,
         button_name: "buttonName",
         button_ID: "button2222"
         })}}>button</button>
