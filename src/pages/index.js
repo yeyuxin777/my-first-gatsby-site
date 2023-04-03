@@ -1,5 +1,6 @@
 import * as React from "react"
 import Layout from '../components/layout'
+import { StaticImage } from 'gatsby-plugin-image'
 
 const IndexPage = () => {
   const isSSR = typeof document === "undefined"
@@ -11,7 +12,7 @@ const IndexPage = () => {
         target="_blank"
         id="hhhhh"
         href="https://www.youtube.com/"
-        pageName={document.title}
+        page_name={document.title}
         buttonId="RW_HP_Top_Banner_Athlete_EHEALTH"
         name="立即预约"
         onClick={()=>{
@@ -27,14 +28,24 @@ const IndexPage = () => {
       >
         <span>Twitter</span>
       </a>
-      <button id="button1" name="buttonName" className="button1" onClick={()=>{
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({
-        event: "click",
-        page_name: document.title,
-        button_name: "buttonName",
-        button_ID: "button2222"
-        })}}>button</button>
+      <button 
+        id="button1" 
+        name="buttonName" 
+        className="button1" 
+        onClick={()=>{
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({
+            event: "click",
+            page_name: document.title,
+            button_name: "buttonName",
+            button_ID: "button2222"
+          })
+        }}
+      >button</button>
+      <StaticImage
+        alt="Clifford, a reddish-brown pitbull, posing on a couch and looking stoically at the camera"
+        src="../images/hhhh.png"
+      />
     </Layout>
   )
 }

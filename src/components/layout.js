@@ -19,20 +19,24 @@ const Layout = ({ pageTitle, children }) => {
             </Link>
           </li>
           <li className={navLinkItem}>
-            <Link to="/about" className={navLinkText}  pageName={document.title}
-        buttonId="RW_HP_Top_Banner_Athlete_EHEALTH"
-        buttonName="立即预约"
-        onClick={()=>{
-          window.dataLayer = window.dataLayer || [];
-          window.dataLayer.push({
-          event: "buttonClick1",
-          page_name: document.title,
-          button_name: "buttonName",
-          button_ID: "button2222"
-          })}}
-        >
-          
+            <Link to="/about" className={navLinkText}  page_name={document.title}
+              button_id="RW_HP_Top_Banner_Athlete_EHEALTH"
+              button_name="立即预约"
+              onClick={()=>{
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                event: "buttonClick1",
+                page_name: document.title,
+                button_name: "buttonName",
+                button_ID: "button2222"
+                })}}
+              >
               About
+            </Link>
+          </li>
+          <li className={navLinkItem}>
+            <Link to="/blog" className={navLinkText}>
+              Blog
             </Link>
           </li>
           <a 
