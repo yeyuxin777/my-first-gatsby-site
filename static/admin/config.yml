@@ -1,3 +1,4 @@
+runtime:     nodejs18.x
 name: my-first-gatsby-site
 publish_mode: editorial_workflow
 media_folder: "images/uploads"
