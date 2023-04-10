@@ -1,6 +1,0 @@
-backend:
-  name: my-first-gatsby-site
-  branch: master 
-publish_mode: editorial_workflow
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
