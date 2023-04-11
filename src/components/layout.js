@@ -19,7 +19,7 @@ const Layout = ({ pageTitle, children }) => {
             </Link>
           </li>
           <li className={navLinkItem}>
-            <Link to="/about" className={navLinkText}  page_name={document.title}
+            <Link to="/about" className={navLinkText} 
               button_id="RW_HP_Top_Banner_Athlete_EHEALTH"
               button_name="立即预约"
               onClick={()=>{
