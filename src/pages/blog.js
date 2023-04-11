@@ -19,16 +19,13 @@ const BlogPage = ({ data }) => {
 }
 
 export const query = graphql`
-  query MyQuery {
-    allMdx {
-      nodes {
-        frontmatter {
-          date(formatString: "MMMM D, YYYY")
-          title
-        }
-      }
+query {
+  allFile {
+    nodes {
+      name
     }
   }
+}
 `
 
 
