@@ -12,7 +12,6 @@ const IndexPage = () => {
         target="_blank"
         id="hhhhh"
         href="https://www.youtube.com/"
-        page_name={document.title}
         buttonId="RW_HP_Top_Banner_Athlete_EHEALTH"
         name="立即预约"
         onClick={()=>{
