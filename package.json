@@ -17,6 +17,7 @@
   "dependencies": {
     "@mdx-js/react": "^2.3.0",
     "gatsby": "^4.24.8",
+    "gatsby-plugin-sass": "^6.7.0",
     "gatsby-awesome-pagination": "^0.3.8",
     "gatsby-plugin-alias-imports": "^1.0.5",
     "gatsby-plugin-canonical-urls": "4.25.0",
