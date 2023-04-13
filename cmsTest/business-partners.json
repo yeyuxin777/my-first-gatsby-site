@@ -1,0 +1,93 @@
+[
+  {
+    "countryHk": "馬來西亞",
+    "countryCn": "马来西亚",
+    "countryEn": "Malaysia",
+    "name": "Pantai Premier Pathology",
+    "introHk": "馬來西亞規模最大的醫學診斷企業之一，隸屬全球知名醫療集團IHH Healthcare旗下。",
+    "introCn": "马来西亚规模最大的医学诊断企业之一，隶属全球知名医疗集团IHH Healthcare旗下。",
+    "introEn": "Affiliated with the renowned global wellbeing specialist, IHH Healthcare, Pantai Premier Pathology is one of Malaysia’s largest diagnostics laboratories.",
+    "link": "https://www.premierpathology.com.my",
+    "lat": 3.8124274936333666,
+    "lng": 101.60320871733128,
+    "hide": false
+  },
+  {
+    "countryHk": "菲律賓",
+    "countryCn": "菲律宾",
+    "countryEn": "Phillippines",
+    "name": "Global Medical Technologies ",
+    "introHk": "一家位於菲律賓的醫療技術公司，主要業務為向菲律賓國內引進世界各地的先進技術，以向醫護人員、患者及消費者提供健康測試和診斷技術的選擇。",
+    "introCn": "GMT是一家位于菲律宾的医疗技术公司，为菲律宾国内引进世界各地的先进健康测试和诊断技术，从而协助医护人员通过科学知识，深入了解患者病况。他们提供多元化的诊断服务，包括肿瘤科、营养科、内科及皮肤科等。",
+    "introEn": "A medical distribution group based in the Philippines, supporting local communities by bringing globally advanced technologies in the country to provide healthcare practitioners, patients and customers with access to different healthcare and diagnostic services.",
+    "link": "https://gmtmanila.com/",
+    "lat": 14.622741230780443,
+    "lng": 120.9678862363281,
+    "hide": false
+  },
+  {
+    "countryHk": "台灣",
+    "countryCn": "台湾",
+    "countryEn": "Taiwan",
+    "name": "Yourgene Health",
+    "introHk": "一家總部設於英國且於倫敦證交所上市的分子診斷公司，主要從事基因測序技術開發和商業化，其業務遍佈台灣、新加坡、美國及加拿大等地區。",
+    "introCn": "是一家总部设于英国且于伦敦证交所上市的国际分子诊断集团，其业务遍布台湾地区、新加坡、美国及加拿大等。本是次与有劲基因的合作将为日后双方在突破性技术商业化的路上奠下了基石。",
+    "introEn": "Listed on the London Stock Exchange, UK-headquartered Yourgene Health is leading the way in international molecular diagnostics and commercialised genomic services via branches in Taipei, Singapore, the U.S., and Canada.",
+    "link": "https://www.yourgene-health.com",
+    "lat": 24.007028114876242,
+    "lng": 121.07166512736177,
+    "hide": false
+  },
+  {
+    "countryHk": "新加坡",
+    "countryCn": "新加坡",
+    "countryEn": "Singapore",
+    "name": "Lifestrands Genomics",
+    "introHk": "一家業務橫跨新加坡、馬來西亞及越南的基因科技集團，隸屬醫學診斷集團Pathology Asia Holdings旗下，其子公司GenomixLab是馬來西亞第一家獲得CAP認證的醫學實驗室。",
+    "introCn": "主要通过其位于新加坡和马来西亚获CAP认证的实验室，为东南亚地区提供临床基因检测服务。我司和LifeStrands同样致力于运用先进的科研成果来寻找创新医疗方案，竭力改善民众的健康。",
+    "introEn": "A genomic technology pioneer whose operations cover Singapore, Malaysia and Vietnam, Lifestrands Genomics is a member of the Pathology Asia Holdings, a genomics group. Its sister company, GenomixLab, is Malaysia’s first CAP certified laboratory.",
+    "link": "",
+    "lat": 1.3579294889776585,
+    "lng": 103.86964607814394,
+    "hide": false
+  },
+  {
+    "countryHk": "菲律賓",
+    "countryCn": "菲律宾",
+    "countryEn": "Philippines",
+    "name": "Pascific Laboratories",
+    "introHk": "一家業務橫跨菲律賓、新加坡及印度的病理診斷集團，主要業務為以精準醫療為方針的病理學及分子診斷。",
+    "introCn": "是一家业务横跨菲律宾、新加坡及印度的病理诊断集团，主要提供以精准医疗为方针的病理学及分子诊断。我司很荣幸能与其杰出的研究人员和临床医护团队并肩同行，一起实践彼此的共同目标。",
+    "introEn": "A medical diagnostics group operating in the Philippines, Singapore and India, Pascific Laboratories focuses on precision pathology and molecular diagnostics. ",
+    "link": "https://www.pascific.com/",
+    "lat": 14.622741230780443,
+    "lng": 120.9678862363281,
+    "hide": false
+  },
+  {
+    "countryHk": "卡塔爾",
+    "countryCn": "卡塔尔",
+    "countryEn": "Qatar",
+    "name": "Tempcon",
+    "introHk": "一家總部位於多哈的醫療器械供應商，致力為當地的私人醫療機構、公立醫療服務、連鎖診所及大型企業提供從日常消費品、試劑到高端科技型的醫療器械。",
+    "introCn": "一家总部位于多哈的医疗器械供货商，致力为当地的私人医疗机构、公立医疗服务、连锁诊所及大型企业提供从日常消费品、试剂到高端科技型的医疗器械。",
+    "introEn": "Headquartered in Doha, Tempcon provides local public and private medical institutions, chain clinics, as well large corporates an extensive range of medical products, including daily consumables, laboratory reagents and top-notch medical devices.",
+    "link": "https://www.tempconqatar.com/index.php",
+    "lat": 25.310775003022403,
+    "lng": 51.195632901833974,
+    "hide": false
+  },
+  {
+    "countryHk": "澳門",
+    "countryCn": "澳门",
+    "countryEn": "Macao",
+    "name": "Catalyst Bioscience",
+    "introHk": "一家位於澳門的生物科技經銷商，致力為當地的醫療機構提供高端科技測試。",
+    "introCn": "一家位于澳门的生物科技经销商，致力为当地的医疗机构提供高端科技测试。",
+    "introEn": "A Macau-based biotechnology distributor dedicated to providing high-end testing technology to local medical institutions.",
+    "link": "",
+    "lat": 22.158991865767508,
+    "lng": 113.57665634534713,
+    "hide": false
+  }
+]

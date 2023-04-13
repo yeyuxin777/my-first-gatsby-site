@@ -1,0 +1,115 @@
+[
+  {
+    "title": "menu.whats_new",
+    "banner": "whats_new_section_banner",
+    "mobileBanner": "whats_new_section_banner_mobile",
+    "path": "/whats-new/",
+    "titleColor": "primary.main",
+    "sections": [
+      {
+        "title": "menu.promotions",
+        "path": "/whats-new/promotions/"
+      },
+      {
+        "title": "menu.health_tips",
+        "path": "/whats-new/health-tips/"
+      },
+      {
+        "title": "menu.updates",
+        "path": "/whats-new/updates/"
+      }
+    ]
+  },
+  {
+    "title": "menu.our_technologies",
+    "banner": "technologies_section_banner",
+    "mobileBanner": "technologies_section_banner_mobile",
+    "path": "/our-technologies/",
+    "titleColor": "primary.main",
+    "sections": [
+      {
+        "title": "menu.early_cancer_detection",
+        "path": "/our-technologies/early-cancer-detection/"
+      },
+      {
+        "title": "menu.ngs",
+        "path": "/our-technologies/NGS/"
+      },
+      {
+        "title": "menu.clinical_papers",
+        "path": "/our-technologies/clinical-papers/"
+      }
+    ]
+  },
+  {
+    "title": "menu.products_and_services",
+    "banner": "products_services_section_banner",
+    "mobileBanner": "products_services_section_banner_mobile",
+    "path": "/products-and-services/",
+    "titleColor": "primary.main",
+    "sections": [
+      {
+        "title": "menu.take2_prophecy",
+        "path": "/products-and-services/take2-prophecy/"
+      },
+      {
+        "title": "menu.cancer_screen_package",
+        "path": "/products-and-services/cancer-screen-package/"
+      },
+      {
+        "title": "menu.health_check_package",
+        "path": "/products-and-services/health-check-package/"
+      },
+      {
+        "title": "menu.take2_clarity",
+        "path": "/products-and-services/take2-clarity/"
+      },
+      {
+        "title": "menu.take2_extra_care",
+        "path": "/products-and-services/take2-extra-care/"
+      },
+      {
+        "title": "menu.faq",
+        "path": "/products-and-services/FAQ/"
+      }
+    ]
+  },
+  {
+    "title": "menu.service_location",
+    "banner": "whats_new_section_banner",
+    "mobileBanner": "whats_new_section_banner_mobile",
+    "path": "/service-location/",
+    "titleColor": "common.white"
+  },
+  {
+    "title": "menu.international",
+    "banner": "international_section_banner",
+    "mobileBanner": "international_section_banner_mobile",
+    "path": "/international/",
+    "titleColor": "primary.main"
+  },
+  {
+    "title": "menu.about_us",
+    "banner": "about_us_section_banner",
+    "mobileBanner": "about_us_section_banner_mobile",
+    "path": "/about-us/",
+    "titleColor": "common.white",
+    "sections": [
+      {
+        "title": "menu.mission",
+        "path": "/about-us/mission/"
+      },
+      {
+        "title": "menu.join_us",
+        "path": "/about-us/join-us/"
+      }
+    ]
+  },
+  {
+    "title": "menu.contact_us",
+    "titleColor": "common.white",
+    "banner": "contact_us_section_banner",
+    "mobileBanner": "contact_us_section_banner_mobile",
+    "path": "/contact-us/"
+  }
+]
