@@ -1,4 +1,345 @@
-name: my-first-gatsby-site
-publish_mode: editorial_workflow
-media_folder: "images/uploads"
-public_folder: "/images/uploads"s
+backend:
+  name: git-gateway
+  branch: main # Branch to update (optional; defaults to master)
+  commit_messages:
+    create: 'Create {{collection}} “{{slug}}”'
+    update: 'Update {{collection}} “{{slug}}”'
+    delete: 'Delete {{collection}} “{{slug}}”'
+    uploadMedia: '[skip ci] Upload “{{path}}”'
+    deleteMedia: '[skip ci] Delete “{{path}}”'
+
+local_backend: true
+
+media_folder: cmsTest/images
+public_folder: ../images
+collections:
+  - name: 'docs'
+    label: 'Docs'
+    folder: 'docs'
+    create: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'date' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'terms-and-conditions'
+    label: 'T&C'
+    folder: 'cmsTest/terms-and-conditions'
+    create: true
+    slug: '{{fields.slug}}'
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'date' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Hide', name: 'hide', widget: 'boolean', required: false }
+      - {
+          label: 'Slug',
+          name: 'slug',
+          widget: 'select',
+          options:
+            [
+              'terms-and-conditions',
+              'privacy-policy',
+              'website-terms-of-use',
+              'personal-information-collection-statement',
+            ],
+          default: 'personal-infomation-collection-statement',
+        }
+      - {
+          label: 'Languages',
+          name: 'languages',
+          widget: 'select',
+          multiple: true,
+          min: 1,
+          max: 3,
+          options: ['zh-HK', 'zh-CN', 'en'],
+          default: ['zh-HK'],
+        }
+  - name: 'promotions'
+    label: Promotions Post
+    folder: 'cmsTest/promotions'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}_{{slug}}'
+    fields:
+      - { label: 'Hide', name: 'hide', widget: 'boolean', required: false }
+      - {
+          label: 'Languages',
+          name: 'languages',
+          widget: 'select',
+          multiple: true,
+          min: 1,
+          max: 3,
+          options: ['zh-HK', 'zh-CN', 'en'],
+          default: ['zh-HK'],
+        }
+      - {
+          label: 'Cover',
+          name: 'cover',
+          min: 1,
+          widget: 'list',
+          field: { label: 'Image', name: 'image', widget: 'image' },
+        }
+      - { label: 'Publish Date', name: 'date', widget: 'date' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Detail', name: 'detail', widget: 'text' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Type', name: 'type', widget: 'select', options: [], default: [], required: false }
+      - { label: 'Pdf', name: 'pdf', widget: 'file', required: false }
+      - { label: 'Href', name: 'href', widget: 'string', required: false }
+      - { label: 'Slug', name: 'slug', widget: 'string', required: false }
+  - name: 'health-tips'
+    label: Health Tips Post
+    folder: 'cmsTest/health-tips'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}_{{slug}}'
+    fields:
+      - { label: 'Hide', name: 'hide', widget: 'boolean', required: false }
+      # Campaign Post Template
+      - { label: 'Show In Campaign Page', name: 'isCampaign', widget: 'boolean', required: false }
+      # TODO show only when post is campaign post
+      - {
+          label: 'Campaign Post Type',
+          name: 'postType',
+          widget: 'select',
+          options: ['campaignStory', 'campaignNews', 'campaignAthlete'],
+          default: [],
+          required: false,
+        }
+      # TODO show only when post is campaignAthlete
+      - {
+          label: 'Athlete Type',
+          name: 'athleteType',
+          widget: 'select',
+          options: ['体操', '骑马', '潜水'],
+          default: [],
+          required: false,
+        }
+      # Languages Template
+      - {
+          label: 'Languages',
+          name: 'languages',
+          widget: 'select',
+          multiple: true,
+          min: 1,
+          max: 3,
+          options: ['zh-HK', 'zh-CN', 'en'],
+          default: ['zh-HK'],
+        }
+      - {
+          label: 'Cover',
+          name: 'cover',
+          min: 1,
+          widget: 'list',
+          field: { label: 'Image', name: 'image', widget: 'image' },
+        }
+      - { label: 'Publish Date', name: 'date', widget: 'date' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Detail', name: 'detail', widget: 'text' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - {
+          label: 'Type',
+          name: 'type',
+          widget: 'select',
+          options: ['health_tip', 'professional_healthcare_tip'],
+          default: [],
+          required: false,
+        }
+      - { label: 'Pdf', name: 'pdf', widget: 'file', required: false }
+      - { label: 'Href', name: 'href', widget: 'string', required: false }
+      - { label: 'Slug', name: 'slug', widget: 'string', required: false }
+  - name: 'updates'
+    label: Update Post
+    folder: 'cmsTest/updates'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}_{{slug}}'
+    fields:
+      - { label: 'Hide', name: 'hide', widget: 'boolean', required: false }
+      - {
+          label: 'Languages',
+          name: 'languages',
+          widget: 'select',
+          multiple: true,
+          min: 1,
+          max: 3,
+          options: ['zh-HK', 'zh-CN', 'en'],
+          default: ['zh-HK'],
+        }
+      - {
+          label: 'Cover',
+          name: 'cover',
+          min: 1,
+          widget: 'list',
+          field: { label: 'Image', name: 'image', widget: 'image' },
+        }
+      - { label: 'Publish Date', name: 'date', widget: 'date' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Detail', name: 'detail', widget: 'text' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - {
+          label: 'Type',
+          name: 'type',
+          widget: 'select',
+          options:
+            [
+              'company_trends',
+              'industry_information',
+              'company_awards_and_achievements',
+              'ceo_sharing',
+              'business_cooperation',
+            ],
+          default: [],
+          required: false,
+        }
+      - { label: 'Href', name: 'href', widget: 'string', required: false }
+      - { label: 'Slug', name: 'slug', widget: 'string', required: false }
+  - name: 'campaign-page-posts'
+    label: Campaign Page Post
+    folder: 'cmsTest/campaign-page-posts'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}_{{slug}}'
+    fields:
+      - { label: 'Hide', name: 'hide', widget: 'boolean', required: false }
+        # Campaign Post Template
+      - { label: 'Show In Campaign Page', name: 'isCampaign', widget: 'boolean', required: false }
+      # TODO show only when post is campaign post
+      - {
+          label: 'Campaign Post Type',
+          name: 'postType',
+          widget: 'select',
+          options: ['campaignStory', 'campaignNews', 'campaignAthlete'],
+          default: [],
+          required: false,
+        }
+      # TODO show only when post is campaignAthlete
+      - {
+          label: 'Athlete Type',
+          name: 'athleteType',
+          widget: 'select',
+          options: ['体操', '骑马', '潜水'],
+          default: [],
+          required: false,
+        }
+      - {
+          label: 'Languages',
+          name: 'languages',
+          widget: 'select',
+          multiple: true,
+          min: 1,
+          max: 3,
+          options: ['zh-HK', 'zh-CN', 'en'],
+          default: ['zh-HK'],
+        }
+      - {
+          label: 'Cover',
+          name: 'cover',
+          min: 1,
+          widget: 'list',
+          field: { label: 'Image', name: 'image', widget: 'image' },
+        }
+      - { label: 'Publish Date', name: 'date', widget: 'date' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Detail', name: 'detail', widget: 'text' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Type', name: 'type', widget: 'select', options: [], default: [], required: false }
+      - { label: 'Pdf', name: 'pdf', widget: 'file', required: false }
+      - { label: 'Href', name: 'href', widget: 'string', required: false }
+      - { label: 'Slug', name: 'slug', widget: 'string', required: false }
+  - name: 'clinic-papers'
+    label: Clinical Paper
+    folder: 'cmsTest/clinic-papers'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}_{{slug}}'
+    fields:
+      - { label: 'Hide', name: 'hide', widget: 'boolean', required: false }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'date' }
+      - { label: 'Pdf', name: 'pdf', widget: 'file', required: false }
+      - { label: 'Detail', name: 'detail', widget: 'text' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Href', name: 'href', widget: 'string', required: false }
+  - name: 'careers'
+    label: Career
+    folder: 'cmsTest/careers'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}_{{slug}}'
+    fields:
+      - { label: 'Hide', name: 'hide', widget: 'boolean', required: false }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'date' }
+      - {
+          label: 'Languages',
+          name: 'languages',
+          widget: 'select',
+          multiple: true,
+          min: 1,
+          max: 3,
+          options: ['zh-HK', 'zh-CN', 'en'],
+          default: ['zh-HK'],
+        }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - {
+          label: 'Department',
+          name: 'type',
+          widget: 'select',
+          options: ['business_strategic_cooperation', 'dite'],
+          default: [],
+        }
+      - {
+          label: 'Region',
+          name: 'region',
+          widget: 'select',
+          options: ['all', 'mainland_china', 'hongkong_special_administrative_region'],
+          default: [],
+        }
+  - name: 'hero-banners'
+    label: 'Hero Banners'
+    folder: 'cmsTest/hero-banners'
+    create: true
+    fields:
+      - { label: 'HK Title', name: 'titleHk', widget: 'string' }
+      - { label: 'EN Title', name: 'titleEn', widget: 'string', required: false }
+      - { label: 'CN Title', name: 'titleCn', widget: 'string', required: false }
+      - { label: 'HK Detail', name: 'detailHk', widget: 'text' }
+      - { label: 'EN Detail', name: 'detailEn', widget: 'text', required: false }
+      - { label: 'CH Detail', name: 'detailCn', widget: 'text', required: false }
+      - { label: 'Image', name: 'image', widget: 'image' }
+      - { label: 'Mobile Image', name: 'mobileImage', widget: 'image' }
+      - {
+          label: 'Buttons',
+          name: 'buttons',
+          widget: 'list',
+          mix: 1,
+          max: 3,
+          fields:
+            [
+              {
+                label: 'Variant',
+                name: 'variant',
+                widget: 'select',
+                options: ['text', 'outlined', 'contained'],
+                default: [],
+                required: false,
+              },
+              {
+                label: 'Color',
+                name: 'color',
+                widget: 'select',
+                options: ['primary', 'secondary'],
+                default: [],
+                required: false,
+              },
+              {
+                label: 'Name',
+                name: 'name',
+                widget: 'select',
+                options: ['common.learn_more', 'common.book_now'],
+                default: [],
+                required: false,
+              },
+
+              { label: 'Link', name: 'link', widget: 'text', required: false },
+              { label: 'Id', name: 'id', widget: 'text', required: false },
+            ],
+        }
+      - { label: 'Reference', name: 'reference', widget: 'markdown' }
+      - { label: 'Theme', name: 'theme', widget: 'select', options: ['light', 'dark'], default: [] }
+      - { label: 'Sort', name: 'sort', widget: 'number', value_type: 'int', default: 0 }
