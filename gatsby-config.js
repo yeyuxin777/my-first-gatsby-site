@@ -10,6 +10,7 @@ module.exports = {
     "gatsby-plugin-sass", 
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
+    'gatsby-plugin-netlify',
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -17,6 +18,6 @@ module.exports = {
         path: `${__dirname}/src/blog/`,
       }
     },
-    "gatsby-plugin-mdx",
+    "gatsby-plugin-mdx"
   ]
 };
